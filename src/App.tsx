@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const App = function () {
-  return <div className="App" />;
-};
+const App:FC = () => <div className="App" />;
 
 export default App;
