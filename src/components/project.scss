@@ -1,0 +1,18 @@
+.project-component {
+    min-width: 40%;
+    height: 40%;
+    flex-direction: column;
+
+    .picture {
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+    }
+
+    .technologies {
+        .tecnology {
+            max-width: 30%;
+            height: 3rem;
+        }    
+    }
+}
