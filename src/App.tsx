@@ -14,14 +14,11 @@ const App:FC = () => (
     <Main>
       <ScreenItem child={<Home />} />
       <ScreenItem child={(
-        <div className="project-container">
+        <div id="project-container">
           <Project title="Project A" technologies={['Rails', 'React', 'Jest', 'Redux']} />
           <Project title="Project B" technologies={['Rails', 'React', 'Jest', 'Redux']} />
           <Project title="Project C" technologies={['Rails', 'React', 'Jest', 'Redux']} />
           <Project title="Project D" technologies={['Rails', 'React', 'Jest', 'Redux']} />
-          <Project title="Project E" technologies={['Rails', 'React', 'Jest', 'Redux']} />
-          <Project title="Project F" technologies={['Rails', 'React', 'Jest', 'Redux']} />
-
         </div>
       )}
       />
