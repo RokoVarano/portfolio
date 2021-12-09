@@ -1,3 +1,5 @@
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+
 $p-color: white;
 $h-color: red;
 $name-height: 10vh;
@@ -35,3 +37,4 @@ h1, h2, h3, h4, h5 {
 @import './components/screenitem.scss';
 @import './components/home.scss';
 @import './components/project.scss';
+@import './components/contact.scss';

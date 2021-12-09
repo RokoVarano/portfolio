@@ -1,0 +1,13 @@
+#contact-component {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+
+    * {
+        justify-content: center;
+    }
+
+    #contact-form {
+        flex-direction: column;
+    }
+}

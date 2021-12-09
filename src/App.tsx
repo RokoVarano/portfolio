@@ -6,6 +6,7 @@ import './styles.scss';
 import ScreenItem from './components/ScreenItem';
 import Home from './components/Home';
 import Project from './components/Project';
+import Contact from './components/Contact';
 
 const App:FC = () => (
   <div className="App">
@@ -22,6 +23,7 @@ const App:FC = () => (
         </div>
       )}
       />
+      <ScreenItem child={<Contact />} style={{ justifyContent: 'center' }} />
     </Main>
   </div>
 );
