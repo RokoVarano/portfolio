@@ -8,13 +8,15 @@ import Home from './components/Home';
 import Project from './components/Project';
 import Contact from './components/Contact';
 import Certificate from './components/Certificate';
+import Recomendation from './components/Recomendation';
+import defaultPic from './Utils';
 
 const App:FC = () => (
   <div className="App">
     <Name />
     <Sidebar />
     <Main>
-      <ScreenItem child={<Home />} />
+      <ScreenItem child={<Home />} style={{ backgroundImage: `url(${defaultPic}` }} />
       <ScreenItem child={(
         <div id="project-container">
           <Project title="Project A" technologies={['Rails', 'React', 'Jest', 'Redux']} />
@@ -32,6 +34,21 @@ const App:FC = () => (
           <Certificate title="HTML" />
         </div>
       )}
+      />
+      <ScreenItem
+        child={(
+          <>
+            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
+            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" email="developer@cheese.org" />
+            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" />
+            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
+            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
+            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
+            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
+            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
+          </>
+        )}
+        style={{ flexWrap: 'wrap', overflowY: 'auto', justifyContent: 'space-evenly' }}
       />
       <ScreenItem child={<Contact />} style={{ justifyContent: 'center' }} />
     </Main>
