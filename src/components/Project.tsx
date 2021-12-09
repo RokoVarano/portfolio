@@ -11,7 +11,12 @@ const Project = ({ pictureUrl, title, technologies = [] }: Props) => {
 
   return (
     <div className="project-component">
-      <div className="picture" style={{ backgroundImage: `url(${pictureUrl})` }} />
+      <div className="picture" style={{ backgroundImage: `url(${pictureUrl})` }}>
+        <ul>
+          <li><h3>Live demo</h3></li>
+          <li><h3>Repository</h3></li>
+        </ul>
+      </div>
       <h3 className="title">{title}</h3>
       <ul className="technologies">{technolist}</ul>
 

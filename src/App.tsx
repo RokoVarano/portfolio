@@ -16,7 +16,7 @@ const App:FC = () => (
     <Name />
     <Sidebar />
     <Main>
-      <ScreenItem child={<Home />} style={{ backgroundImage: `url(${defaultPic}` }} />
+      <ScreenItem child={<Home />} style={{ backgroundImage: `url(${defaultPic}` }} colorWash />
       <ScreenItem child={(
         <div id="project-container">
           <Project title="Project A" technologies={['Rails', 'React', 'Jest', 'Redux']} />

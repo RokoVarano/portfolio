@@ -13,9 +13,27 @@
             background-position: center;
             background-size: cover;
             height: 100%;
+            position: relative;
+
+            * {
+                background-color: $screenitem-color; 
+            }
+
+            ul {
+                flex-direction: column;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+
+        .title {
+            justify-content: center;
         }
     
         .technologies {
+            justify-content: space-evenly;
+
             .tecnology {
                 max-width: 30%;
                 height: 3rem;
