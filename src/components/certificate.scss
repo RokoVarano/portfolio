@@ -1,0 +1,29 @@
+#certificate-container {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    
+    .certificate-component {
+        min-width: 40%;
+        height: 40%;
+        flex-direction: column;
+    
+        .picture {
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+        }
+    
+        .footnote {
+            height: 3rem;
+
+            .icon {
+                width: 3rem;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+    }
+}
+

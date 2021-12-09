@@ -7,6 +7,7 @@ import ScreenItem from './components/ScreenItem';
 import Home from './components/Home';
 import Project from './components/Project';
 import Contact from './components/Contact';
+import Certificate from './components/Certificate';
 
 const App:FC = () => (
   <div className="App">
@@ -20,6 +21,15 @@ const App:FC = () => (
           <Project title="Project B" technologies={['Rails', 'React', 'Jest', 'Redux']} />
           <Project title="Project C" technologies={['Rails', 'React', 'Jest', 'Redux']} />
           <Project title="Project D" technologies={['Rails', 'React', 'Jest', 'Redux']} />
+        </div>
+      )}
+      />
+      <ScreenItem child={(
+        <div id="certificate-container">
+          <Certificate title="React" />
+          <Certificate title="Rails" />
+          <Certificate title="English" />
+          <Certificate title="HTML" />
         </div>
       )}
       />
