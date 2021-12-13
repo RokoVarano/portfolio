@@ -1,0 +1,19 @@
+.screenitem-component {
+    min-height: 90vh;
+    max-height: 90vh;
+    position: relative;
+    padding: 5rem;
+    background-size: cover;
+    background-position: top;
+    border: $p-color solid 1px;
+
+    .background-color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        background-color: $screenitem-color;
+    }
+}

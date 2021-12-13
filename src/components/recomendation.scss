@@ -1,0 +1,17 @@
+.recomendation-component {
+    flex-direction: column;
+    margin: 1rem;
+    max-width: 40%;
+    
+    * {
+        flex-direction: column;
+    }
+
+    .listnquote {
+        flex-direction: row;
+
+        li {
+            flex-direction: row;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+
+$p-color: white;
+$h-color: red;
+$name-height: 10vh;
+$screenitem-color: rgba(255, 255, 255, 0.281);
+
+.App {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display:flex;
+    flex-direction: row;
+    
+    * {
+        display: flex;
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        color: $p-color;
+    }
+
+    h1, h2, h3, h4, h5 {
+        color: $h-color;
+    }
+}
+
+@import './components/name.scss';
+@import './components/sidebar.scss';
+@import './components/main.scss';
+@import './components/screenitem.scss';
+@import './components/home.scss';
+@import './components/project.scss';
+@import './components/contact.scss';
+@import './components/certificate.scss';
+@import './components/recomendation.scss';

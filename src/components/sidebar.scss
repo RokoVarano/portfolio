@@ -1,0 +1,12 @@
+#sidebar-component {
+    flex-direction: column;
+
+    * {
+        flex-direction: inherit;
+        white-space: nowrap;
+    }
+
+    #top-separator {
+        height: $name-height;
+    }
+}

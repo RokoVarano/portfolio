@@ -1,0 +1,10 @@
+#name-component {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $name-height;
+    white-space: nowrap;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: space-around;
+}
