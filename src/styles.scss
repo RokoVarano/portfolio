@@ -1,9 +1,15 @@
 @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Bebas+Neue&family=Lato:wght@300&display=swap');
 
+$font-name:'Bebas Neue', cursive;
+$font-h: 'Arimo', sans-serif;
+$font-p: 'Lato', sans-serif;
 $p-color: white;
 $h-color: red;
-$name-height: 10vh;
-$screenitem-color: rgba(255, 255, 255, 0.281);
+$flag-black: black;
+$flag-blue: blue;
+$name-height: 20vh;
+$screenitem-color: rgba(255, 255, 255, 0.445);
 
 .App {
     position: absolute;
@@ -25,6 +31,12 @@ $screenitem-color: rgba(255, 255, 255, 0.281);
 
     h1, h2, h3, h4, h5 {
         color: $h-color;
+        font-family: $font-h
+    }
+
+    p {
+        color: $p-color;
+        font-family: $font-p
     }
 }
 
