@@ -5,11 +5,11 @@ const Sidebar = () => (
     <div id="top-separator" />
 
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#recomendations">Recomendations</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#home"><div className="bluebar"><h4>Home</h4></div></a></li>
+      <li><a href="#projects"><div className="bluebar"><h4>Projects</h4></div></a></li>
+      <li><a href="#certificates"><div className="bluebar"><h4>Certificates</h4></div></a></li>
+      <li><a href="#recomendations"><div className="bluebar"><h4>Recomendations</h4></div></a></li>
+      <li><a href="#contact"><div className="bluebar"><h4>Contact</h4></div></a></li>
     </ul>
   </nav>
 );
