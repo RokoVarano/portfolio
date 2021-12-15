@@ -8,8 +8,8 @@ import Home from './components/Home';
 import Project from './components/Project';
 import Contact from './components/Contact';
 import Certificate from './components/Certificate';
-import Recomendation from './components/Recomendation';
-import defaultPic from './Utils';
+import defaultPic, { fakeJob1, fakeJob2 } from './Utils';
+import Experience from './components/Experience';
 
 const App:FC = () => (
   <div className="App">
@@ -41,16 +41,7 @@ const App:FC = () => (
       />
       <ScreenItem
         child={(
-          <>
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" email="developer@cheese.org" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
-          </>
+          <Experience jobs={[fakeJob1, fakeJob2]} />
         )}
         style={{ flexWrap: 'wrap', overflowY: 'auto', justifyContent: 'space-evenly' }}
         id="recomendations"

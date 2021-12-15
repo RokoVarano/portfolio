@@ -9,7 +9,6 @@ $h-color: red;
 $flag-black: black;
 $flag-blue: blue;
 $name-height: 20vh;
-$screenitem-color: rgba(255, 255, 255, 0.445);
 
 .App {
     position: absolute;
@@ -23,7 +22,6 @@ $screenitem-color: rgba(255, 255, 255, 0.445);
     
     * {
         display: flex;
-        background-color: black;
         margin: 0;
         padding: 0;
         color: $p-color;
@@ -48,4 +46,4 @@ $screenitem-color: rgba(255, 255, 255, 0.445);
 @import './components/project.scss';
 @import './components/contact.scss';
 @import './components/certificate.scss';
-@import './components/recomendation.scss';
+@import './components/experience.scss';

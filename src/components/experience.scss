@@ -1,0 +1,21 @@
+#recomendations {
+    justify-content: flex-start;
+    
+    ul {
+        flex-direction: column;
+        
+        li {
+            flex-direction: column;
+        }
+    }
+
+    .jobs-container {
+        width: 50%;
+        background-color: yellow;
+    }
+    
+    .recs-container {
+        width: 50%;
+        background-color: pink;
+    }
+}

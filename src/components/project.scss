@@ -15,10 +15,6 @@
             height: 100%;
             position: relative;
 
-            * {
-                background-color: $screenitem-color; 
-            }
-
             ul {
                 flex-direction: column;
                 position: absolute;
