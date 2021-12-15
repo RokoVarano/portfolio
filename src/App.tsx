@@ -20,10 +20,10 @@ const App:FC = () => (
       <ScreenItem
         child={(
           <div id="project-container">
-            <Project title="Project A" technologies={['Rails', 'React', 'Jest', 'Redux']} />
+            <Project title="Project A" technologies={['Rails', 'React', 'Jest', 'Redux']} borderColor="red" />
             <Project title="Project B" technologies={['Rails', 'React', 'Jest', 'Redux']} />
             <Project title="Project C" technologies={['Rails', 'React', 'Jest', 'Redux']} />
-            <Project title="Project D" technologies={['Rails', 'React', 'Jest', 'Redux']} />
+            <Project title="Project D" technologies={['Rails', 'React', 'Jest', 'Redux']} borderColor="blue" />
           </div>
       )}
         id="projects"
