@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Slider from 'react-slick';
 import defaultPic from '../Utils';
@@ -17,17 +18,16 @@ const CertificateDetails = ({
 }: Props) => {
   const carouselContents = items.map((item) => (
     <div className="carouselitem">
-      <img className="carouselpic" src={item.picture} alt="no pic" />
+      <div className="carouselpic" style={{ backgroundImage: `url(${item.picture})` }} />
       <h2>Certificate title</h2>
       <p>{`${item.source}, ${item.date}`}</p>
     </div>
   ));
 
   return (
-    <Slider adaptiveHeight>
+    <Slider>
       {carouselContents}
     </Slider>
-
   );
 };
 

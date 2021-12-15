@@ -45,20 +45,67 @@
 }
 
 
+.popup-overlay {
+    background-color: transparentize($color: $flag-black, $amount: 0.3);
 
-.popup-content {
-    min-width: 80vw;
-    min-height: auto;
-    background-color: lawngreen;
+    .popup-content {
+        width: 60vw;
+        height: 60vh;
+        background-color: $p-color;
+    
+        .slick-slider {
+            height: 60vh;
+            padding: 2rem;
+    
+            .slick-arrow::before {
+                font-size: 3rem;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                color: $p-color;
+                height: 60vh;
+    
+            }
+    
+            .slick-prev::before {
+                background-color: $h-color;
+                left: -25px;
+                top: -23vh;
+            }
+    
+            .slick-next::before {
+                background-color: $flag-blue;
+                top: -35vh;
+            }
+        }
+    
+        .carouselitem {
+            display: flex;
+            justify-content: center;
+    
+    
+            .carouselpic {
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: auto;
+                height: 45vh;
+            }
 
-    .slick-slider {
-        width: 80vw;
-        height: auto;
-        padding: 2rem;
-    }
+            h2 {
+                font-family: $font-h;
+                color: $h-color;
+                text-align: center;
+            }
 
-    .carouselpic {
-        width: 100%;
-        height: auto;
+            p {
+                font-family: $font-p;
+                color: $flag-black;
+                text-align: center;
+            }
+
+        }
+    
     }
 }
+
