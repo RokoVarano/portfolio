@@ -26,10 +26,8 @@ const Experience:FC<Props> = (props: Props) => {
 
   const recommendationDisplay = (job: Job) => (
     <li className="rec-container">
-      <h1>{job.name}</h1>
-      <h2>{job.title}</h2>
-      <h3>{job.phone}</h3>
-      <h3>{job.email}</h3>
+      <h1>{`${job.name}, ${job.title}`}</h1>
+      <p>{`${job.phone}, ${job.email}`}</p>
     </li>
   );
   return (
@@ -38,7 +36,7 @@ const Experience:FC<Props> = (props: Props) => {
         { jobs.map((job: Job) => jobDisplay(job)) }
       </ul>
       <ul className="recs-container">
-        <p>{currentJob?.description}</p>
+        <p className="position">{currentJob?.description}</p>
         { currentJob?.recommendations.map((rec: Job) => recommendationDisplay(rec))}
       </ul>
     </>
