@@ -32,8 +32,8 @@ const App:FC = () => (
         child={(
           <div id="certificate-container">
             <Certificate title="React" />
-            <Certificate title="Rails" />
-            <Certificate title="English" />
+            <Certificate title="Rails" borderColor="red" />
+            <Certificate title="English" borderColor="blue" />
             <Certificate title="HTML" />
           </div>
       )}

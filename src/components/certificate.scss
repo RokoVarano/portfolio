@@ -6,26 +6,45 @@
     
     .certificate-component {
         min-width: 40%;
-        height: 40%;
+        height: 45%;
         flex-direction: column;
+        border-radius: 2rem;
+        padding: 1rem;
     
         .picture {
             background-position: center;
             background-size: cover;
             height: 100%;
+            position: relative;
+            border-radius: 1rem 1rem 0 0;
         }
-    
+
         .footnote {
-            height: 3rem;
+            justify-content: flex-start;
+            position: relative;
+            background: $p-color;
+            border-top: 1px solid $h-color;
+            border-radius: 0 0 1rem 1rem;
 
             .icon {
-                width: 3rem;
-                background-position: center;
-                background-size: contain;
+                height: 5vh;
+                width: 6vh;
+                background-color: $h-color;
+                border-radius: 0 0 0 1rem;
+                background-size: cover;
+            }
+
+            .title {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                font-size: 2.5rem;
             }
         }
     }
 }
+
+
 
 .popup-content {
     min-width: 80vw;
