@@ -1,13 +1,129 @@
 #contact-component {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
-    align-content: center;
+    align-items: center;
+
+    .contact-half {
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        width: 40vw;
+    }
 
     * {
         justify-content: center;
     }
 
-    #contact-form {
+    i {
+        margin-right: 1rem;
+    }
+
+    #contact-ws {
+        padding: 1rem;
+        color: $ws-green;
+        border: 0.2rem $ws-green solid;
+        border-radius: 1rem;
+        box-shadow: 0 0 3rem $ws-green, 0 0 2rem $ws-green;
+        background-color: $p-color;
+        height: fit-content;
+        position: absolute;
+        bottom: 0;
+        left: 3rem;
+
+        i {
+            color: $ws-green;
+        }
+    }
+
+    #contact-email {
+        border: 0.2rem $h-color solid;
+        border-radius: 1rem;
+        width: auto;
         flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 0 3rem $h-color, 0 0 2rem $h-color;
+        margin-bottom: 5rem;
+        margin-left: 5rem;
+        position: absolute;
+        top: 12rem;
+        left: 3rem;
+
+        form {
+            flex-direction: column;
+
+            label {
+                font-family: $font-p;
+            }
+            li {
+                flex-direction: column;
+            }
+
+            .email-fields{
+                flex-direction: row;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .email-message {
+                flex-direction: column;
+                align-items: center;
+
+                input {
+                    border-radius: 0.5rem;
+                    background: $p-color;
+                    color: $h-color;
+                }
+            }
+
+            input {
+                width: 15rem;
+                background-color: $flag-black;
+                border: 1px red solid;
+                padding: 0.5rem;
+                font-size: 1.5rem;
+                font-weight: bolder;
+            }
+
+            textarea {
+                width: 30rem;
+                height: 5rem;
+                margin-bottom: 0.5rem;
+                color: $flag-black;
+                padding: 0.5rem;
+            }
+        }
+    }
+
+    #contact-github {
+        padding: 1rem;
+        color: $flag-black;
+        border-radius: 1rem;
+        box-shadow: 0 0 3rem $p-color, 0 0 2rem $p-color;
+        background-color: $p-color;
+        margin-right: 7rem;
+        position: absolute;
+        top: 3rem;
+        right: 6rem;
+
+        i {
+            color: $flag-black;
+        }
+    }
+
+    #contact-linkedin {
+        padding: 1rem;
+        color: $flag-blue;
+        border-radius: 1rem;
+        box-shadow: 0 0 3rem $flag-blue, 0 0 2rem $flag-blue;
+        background-color: $p-color;
+        margin-left: 7rem;
+        position: absolute;
+        bottom: 12rem;
+        left: 0;
+
+        i {
+            color: $flag-blue;
+        }
     }
 }
