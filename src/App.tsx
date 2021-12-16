@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { PDFViewer } from '@react-pdf/renderer';
 import Name from './components/Name';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
@@ -10,6 +11,7 @@ import Contact from './components/Contact';
 import Certificate from './components/Certificate';
 import defaultPic, { fakeJob1, fakeJob2 } from './Utils';
 import Experience from './components/Experience';
+import CV from './components/CV';
 
 const App:FC = () => (
   <div className="App">
@@ -47,6 +49,15 @@ const App:FC = () => (
         id="recomendations"
       />
       <ScreenItem child={<Contact />} style={{ justifyContent: 'center' }} id="contact" />
+      <ScreenItem
+        child={(
+          <PDFViewer width="800">
+            <CV />
+          </PDFViewer>
+          )}
+        id="resume"
+        style={{ justifyContent: 'center' }}
+      />
     </Main>
   </div>
 );

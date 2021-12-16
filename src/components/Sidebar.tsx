@@ -10,6 +10,7 @@ const Sidebar = () => (
       <li><a href="#certificates"><div className="bluebar"><h4>Certificates</h4></div></a></li>
       <li><a href="#recomendations"><div className="bluebar"><h4>Experience</h4></div></a></li>
       <li><a href="#contact"><div className="bluebar"><h4>Contact</h4></div></a></li>
+      <li><a href="#resume"><div className="bluebar"><h4>Resume</h4></div></a></li>
     </ul>
   </nav>
 );
