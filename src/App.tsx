@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { PDFViewer } from '@react-pdf/renderer';
+import Slider from 'react-slick';
 import Name from './components/Name';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
@@ -23,6 +24,8 @@ import {
   rubyCertificate,
   rubyLogo, rubyRailsCertificate,
 } from './components/assets/resources';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const App:FC = () => (
   <div className="App">
@@ -40,6 +43,19 @@ const App:FC = () => (
           </div>
       )}
         id="projects"
+      />
+      <ScreenItem
+        child={(
+          <div id="project-container-mobile">
+            <Slider arrows={false} infinite={false}>
+              <Project title="Project A" technologies={['Rails', 'React', 'Jest', 'Redux']} borderColor="red" noBorder />
+              <Project title="Project B" technologies={['Rails', 'React', 'Jest', 'Redux']} noBorder />
+              <Project title="Project C" technologies={['Rails', 'React', 'Jest', 'Redux']} noBorder />
+              <Project title="Project D" technologies={['Rails', 'React', 'Jest', 'Redux']} borderColor="blue" noBorder />
+            </Slider>
+          </div>
+            )}
+        id="projects-mobile"
       />
       <ScreenItem
         child={(

@@ -17,3 +17,9 @@
         background: radial-gradient(circle at 40% 40%, transparent, 50%, $flag-black 80% );
     }
 }
+
+@media (max-width: 799px){ 
+    .screenitem-component {
+        padding: 0;
+    }
+}
