@@ -17,6 +17,7 @@ import {
   htmlCertificate,
   htmlLogo,
   javascriptCertificate,
+  microverseLogo,
   reactLogo,
   reactReduxCertificate,
   rubyCertificate,
@@ -45,8 +46,8 @@ const App:FC = () => (
           <div id="certificate-container">
             <Certificate title="React" icon={reactLogo} borderColor="#40CCFF" certificates={[reactReduxCertificate, javascriptCertificate]} />
             <Certificate title="Ruby / Rails" borderColor="red" icon={rubyLogo} certificates={[rubyRailsCertificate, rubyCertificate]} />
-            <Certificate title="Ruby / Rails" borderColor="#e54d24" icon={htmlLogo} certificates={[htmlCertificate]} />
-            <Certificate title="Others" certificates={[fullStackCertificate]} />
+            <Certificate title="HTML / CSS" borderColor="#e54d24" icon={htmlLogo} certificates={[htmlCertificate]} />
+            <Certificate title="Others" borderColor="#6F36FF" icon={microverseLogo} certificates={[fullStackCertificate]} />
           </div>
       )}
         id="certificates"

@@ -46,6 +46,8 @@ const htmlCertificate = {
 
 const englishLogo = 'https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_960_720.jpg';
 
+const microverseLogo = 'https://assets-global.website-files.com/5dbb30f00775d4c32191a4df/5e18a9053ee8b2c791075c74_smalllogo.png';
+
 export {
   reactLogo,
   reactReduxCertificate,
@@ -57,4 +59,5 @@ export {
   rubyCertificate,
   htmlLogo,
   htmlCertificate,
+  microverseLogo,
 };
