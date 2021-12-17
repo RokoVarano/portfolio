@@ -1,12 +1,36 @@
 #sidebar-component {
     flex-direction: column;
+    width: 10%;
+    padding-right: 1rem;
+    background-color: $flag-black;
 
     * {
         flex-direction: inherit;
         white-space: nowrap;
+
+        a {
+            text-decoration: none;
+        }
+
+        .bluebar {
+            padding: 1.5rem 1rem 1.5rem 0;
+            background: radial-gradient(ellipse at 0%, $flag-blue, transparent 80%);
+            clip-path: polygon(0% 0, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+
+            h4 {
+                padding-left: 0.5rem;
+                background-color: $p-color;
+                clip-path: polygon(0% 0, 87% 0%, 100% 50%, 87% 100%, 0% 100%);
+            }
+        }
     }
 
     #top-separator {
         height: $name-height;
+    }
+
+    ul {
+        justify-content: space-around;
+        height: 100%;
     }
 }

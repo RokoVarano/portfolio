@@ -2,8 +2,9 @@ import React, { FC } from 'react';
 
 const Name:FC = () => (
   <div id="name-component">
-    <h1>Rodrigo Ibaceta</h1>
-    <h2>Full-stack web developer</h2>
+    <div id="name-flag" />
+    <h1>Varano</h1>
+    <h2>web development</h2>
   </div>
 );
 

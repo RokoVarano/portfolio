@@ -6,44 +6,106 @@
     
     .certificate-component {
         min-width: 40%;
-        height: 40%;
+        height: 45%;
         flex-direction: column;
+        border-radius: 2rem;
+        padding: 1rem;
     
         .picture {
             background-position: center;
             background-size: cover;
             height: 100%;
+            position: relative;
+            border-radius: 1rem 1rem 0 0;
         }
-    
+
         .footnote {
-            height: 3rem;
+            justify-content: flex-start;
+            position: relative;
+            background: $p-color;
+            border-top: 1px solid $h-color;
+            border-radius: 0 0 1rem 1rem;
 
             .icon {
-                width: 3rem;
-                background-position: center;
-                background-size: contain;
+                height: 5vh;
+                width: 6vh;
+                background-color: $h-color;
+                border-radius: 0 0 0 1rem;
+                background-size: cover;
+            }
+
+            .title {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                font-size: 2.5rem;
             }
         }
     }
 }
 
-.popup-content {
-    min-width: 80vw;
-    min-height: auto;
-    background-color: lawngreen;
 
-    .popup-overlay {
-        background-color: $screenitem-color;
-    }
+.popup-overlay {
+    background-color: transparentize($color: $flag-black, $amount: 0.3);
 
-    .slick-slider {
-        width: 80vw;
-        height: auto;
-        padding: 2rem;
-    }
+    .popup-content {
+        width: 60vw;
+        height: 60vh;
+        background-color: $p-color;
+    
+        .slick-slider {
+            height: 60vh;
+            padding: 2rem;
+    
+            .slick-arrow::before {
+                font-size: 3rem;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                color: $p-color;
+                height: 60vh;
+    
+            }
+    
+            .slick-prev::before {
+                background-color: $h-color;
+                left: -25px;
+                top: -23vh;
+            }
+    
+            .slick-next::before {
+                background-color: $flag-blue;
+                top: -35vh;
+            }
+        }
+    
+        .carouselitem {
+            display: flex;
+            justify-content: center;
+    
+    
+            .carouselpic {
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: auto;
+                height: 45vh;
+            }
 
-    .carouselpic {
-        width: 100%;
-        height: auto;
+            h2 {
+                font-family: $font-h;
+                color: $h-color;
+                text-align: center;
+            }
+
+            p {
+                font-family: $font-p;
+                color: $flag-black;
+                text-align: center;
+            }
+
+        }
+    
     }
 }
+

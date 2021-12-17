@@ -1,8 +1,27 @@
 #home-component {
     flex-direction: column;
-    max-width: 60%;
+    max-width: 70%;
     position: absolute;
-    top: 50%;
+    top: 60%;
     right: 0;
+    border: 0.5rem $h-color solid;
+    border-right: none;
+    border-radius: 1rem 0 0 1rem;
+    background-color: transparentize($color: $flag-black, $amount: 0.2);
+    box-shadow: 0 0 2rem $h-color, 0 0 1rem $h-color;
+
+    h1 {
+        color: $p-color;
+        font-size: 6rem;
+        margin-right: 2rem;
+        padding: 2rem;
+        text-shadow: 0 0 1rem $h-color, 0 0 1.5rem $h-color, 0 0 2rem $h-color, 0 0 2.5rem $h-color, 0 0 3rem $h-color, 0 0 3.5rem $h-color, 0 0 4rem $h-color;
+    }
+
+    h3 {
+        font-size: 3rem;
+        margin-right: 2rem;
+        padding: 0 2rem 2rem 2rem;
+    }
 
 }

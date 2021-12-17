@@ -1,0 +1,49 @@
+#recomendations {
+    justify-content: flex-start;
+    
+    ul {
+        flex-direction: column;
+        
+        li {
+            flex-direction: column;
+        }
+    }
+
+    .jobs-container {
+        width: 48%;
+
+        li {
+            margin-bottom: 0.5rem;
+
+            button {
+                background-color: transparent;
+                flex-direction: column;
+                border: 0.2rem $h-color solid;
+                border-radius: 0.5rem;
+
+                * {
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+    
+    .recs-container {
+        width: 48%;
+        padding-left: 1rem;
+        border: 0.2rem $flag-blue solid;
+        border-radius: 0.5rem;
+
+        .position {
+            font-size: 2rem;
+        }
+
+        h1 {
+            color: $flag-blue
+        }
+
+        li {
+            padding: 1rem 0;
+        }
+    }
+}

@@ -1,9 +1,15 @@
 @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Bebas+Neue&family=Lato:wght@300&family=PT+Sans&display=swap');
 
+$font-name:'Bebas Neue', cursive;
+$font-h: 'Arimo', sans-serif;
+$font-p: 'PT Sans', sans-serif;
 $p-color: white;
 $h-color: red;
-$name-height: 10vh;
-$screenitem-color: rgba(255, 255, 255, 0.281);
+$flag-black: black;
+$flag-blue: blue;
+$ws-green: #42BC51;
+$name-height: 20vh;
 
 .App {
     position: absolute;
@@ -17,14 +23,20 @@ $screenitem-color: rgba(255, 255, 255, 0.281);
     
     * {
         display: flex;
-        background-color: black;
         margin: 0;
         padding: 0;
         color: $p-color;
+        box-sizing: border-box;
     }
 
     h1, h2, h3, h4, h5 {
         color: $h-color;
+        font-family: $font-h
+    }
+
+    p {
+        color: $p-color;
+        font-family: $font-p
     }
 }
 
@@ -36,4 +48,4 @@ $screenitem-color: rgba(255, 255, 255, 0.281);
 @import './components/project.scss';
 @import './components/contact.scss';
 @import './components/certificate.scss';
-@import './components/recomendation.scss';
+@import './components/experience.scss';

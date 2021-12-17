@@ -6,38 +6,69 @@
     
     .project-component {
         min-width: 40%;
-        height: 40%;
+        height: 45%;
         flex-direction: column;
+        border-radius: 2rem;
+        padding: 1rem;
     
         .picture {
             background-position: center;
             background-size: cover;
             height: 100%;
             position: relative;
-
-            * {
-                background-color: $screenitem-color; 
-            }
-
-            ul {
-                flex-direction: column;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-            }
+            border-radius: 1rem 1rem 0 0;
         }
 
         .title {
             justify-content: center;
-        }
-    
-        .technologies {
-            justify-content: space-evenly;
+            position: relative;
+            background: $p-color;
+            padding: 1rem;
+            border-top: 1px solid $h-color;
 
+            .project-links {
+                height: 100%;
+
+                .fa-github, .fa-play {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    justify-content: center;
+                    width: 5rem;        
+                    align-items: center;   
+                    font-size: 2rem;        
+                }
+
+                .fa-github {
+                    color: $flag-blue;
+                    left: 0;
+                }
+
+                .fa-play {
+                    color: $h-color;
+                    right: 0;
+                }
+            }
+        }
+        .technologies {
+            background-color: $p-color;
+            border-radius: 0 0 1rem 1rem;
+            justify-content: space-evenly;
+            
             .tecnology {
+                border: 1px solid rgba(0, 0, 0, 0.295);
+                width: 100%;
+                justify-content: center;
+                align-items: center;
                 max-width: 30%;
                 height: 3rem;
-            }    
+
+                p {
+                    color: $flag-blue;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+            }
         }
     }
 }

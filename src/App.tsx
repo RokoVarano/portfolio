@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { PDFViewer } from '@react-pdf/renderer';
 import Name from './components/Name';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
@@ -8,8 +9,9 @@ import Home from './components/Home';
 import Project from './components/Project';
 import Contact from './components/Contact';
 import Certificate from './components/Certificate';
-import Recomendation from './components/Recomendation';
-import defaultPic from './Utils';
+import defaultPic, { fakeJob1, fakeJob2 } from './Utils';
+import Experience from './components/Experience';
+import CV from './components/CV';
 
 const App:FC = () => (
   <div className="App">
@@ -20,10 +22,10 @@ const App:FC = () => (
       <ScreenItem
         child={(
           <div id="project-container">
-            <Project title="Project A" technologies={['Rails', 'React', 'Jest', 'Redux']} />
+            <Project title="Project A" technologies={['Rails', 'React', 'Jest', 'Redux']} borderColor="red" />
             <Project title="Project B" technologies={['Rails', 'React', 'Jest', 'Redux']} />
             <Project title="Project C" technologies={['Rails', 'React', 'Jest', 'Redux']} />
-            <Project title="Project D" technologies={['Rails', 'React', 'Jest', 'Redux']} />
+            <Project title="Project D" technologies={['Rails', 'React', 'Jest', 'Redux']} borderColor="blue" />
           </div>
       )}
         id="projects"
@@ -32,8 +34,8 @@ const App:FC = () => (
         child={(
           <div id="certificate-container">
             <Certificate title="React" />
-            <Certificate title="Rails" />
-            <Certificate title="English" />
+            <Certificate title="Rails" borderColor="red" />
+            <Certificate title="English" borderColor="blue" />
             <Certificate title="HTML" />
           </div>
       )}
@@ -41,21 +43,21 @@ const App:FC = () => (
       />
       <ScreenItem
         child={(
-          <>
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" email="developer@cheese.org" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
-            <Recomendation name="Jose Luis" company="Independant" position="Semi Senior BackEnd Developer" quote="This guy is good enough to work unsupervised in a team" phone="+56999887766" email="developer@cheese.org" />
-          </>
+          <Experience jobs={[fakeJob1, fakeJob2]} />
         )}
         style={{ flexWrap: 'wrap', overflowY: 'auto', justifyContent: 'space-evenly' }}
         id="recomendations"
       />
       <ScreenItem child={<Contact />} style={{ justifyContent: 'center' }} id="contact" />
+      <ScreenItem
+        child={(
+          <PDFViewer width="800">
+            <CV />
+          </PDFViewer>
+          )}
+        id="resume"
+        style={{ justifyContent: 'center' }}
+      />
     </Main>
   </div>
 );

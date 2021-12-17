@@ -7,11 +7,20 @@ interface Props {
   pictureUrl?: string,
   icon?: string,
   title?: string,
+  borderColor?: string
 }
-const Certificate = ({ pictureUrl, title, icon }: Props) => (
+const Certificate = ({
+  pictureUrl, title, icon, borderColor,
+}: Props) => (
   <Popup
     trigger={(
-      <div className="certificate-component">
+      <div
+        className="certificate-component"
+        style={{
+          border: `${borderColor} 0.2rem solid`,
+          boxShadow: `0 0 2rem ${borderColor}, 0 0 1rem white`,
+        }}
+      >
         <div className="picture" style={{ backgroundImage: `url(${pictureUrl})` }} />
         <div className="footnote">
           <div className="icon" style={{ backgroundImage: `url(${icon})` }} />
@@ -49,6 +58,7 @@ Certificate.defaultProps = {
   pictureUrl: defaultPic,
   title: 'no title',
   icon: defaultPic,
+  borderColor: 'white',
 };
 
 export default Certificate;
