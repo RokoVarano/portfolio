@@ -34,3 +34,9 @@
         clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%, 23% 60%);
     }
 }
+
+@media (max-width: 700px) and (orientation: portrait) { 
+    #name-component {
+        display: none;
+    }
+}

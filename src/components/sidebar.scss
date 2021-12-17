@@ -34,3 +34,9 @@
         height: 100%;
     }
 }
+
+@media (max-width: 700px) and (orientation: portrait) { 
+    #sidebar-component {
+        display: none;
+    }
+}
