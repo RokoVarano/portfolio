@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 
 const Home:FC = () => (
   <div id="home-component">
-    <h1>I am Rodrigo Ibaceta!</h1>
-    <h3>a full-stack developer using Ruby on rails and React, and learning so much more!</h3>
+    <h1>Varano Development</h1>
+    <h3>Web development on React and Ruby on Rails</h3>
   </div>
 );
 
