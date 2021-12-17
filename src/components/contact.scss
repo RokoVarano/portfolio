@@ -4,6 +4,7 @@
     align-items: center;
 
     .contact-half {
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
         position: relative;
@@ -27,9 +28,6 @@
         box-shadow: 0 0 3rem $ws-green, 0 0 2rem $ws-green;
         background-color: $p-color;
         height: fit-content;
-        position: absolute;
-        bottom: 0;
-        left: 3rem;
 
         i {
             color: $ws-green;
@@ -45,9 +43,6 @@
         box-shadow: 0 0 3rem $h-color, 0 0 2rem $h-color;
         margin-bottom: 5rem;
         margin-left: 5rem;
-        position: absolute;
-        top: 12rem;
-        left: 3rem;
 
         form {
             flex-direction: column;
@@ -102,9 +97,6 @@
         box-shadow: 0 0 3rem $p-color, 0 0 2rem $p-color;
         background-color: $p-color;
         margin-right: 7rem;
-        position: absolute;
-        top: 3rem;
-        right: 6rem;
 
         i {
             color: $flag-black;
@@ -118,9 +110,6 @@
         box-shadow: 0 0 3rem $flag-blue, 0 0 2rem $flag-blue;
         background-color: $p-color;
         margin-left: 7rem;
-        position: absolute;
-        bottom: 12rem;
-        left: 0;
 
         i {
             color: $flag-blue;

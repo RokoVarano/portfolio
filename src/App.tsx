@@ -12,6 +12,17 @@ import Certificate from './components/Certificate';
 import defaultPic, { fakeJob1, fakeJob2 } from './Utils';
 import Experience from './components/Experience';
 import CV from './components/CV';
+import {
+  fullStackCertificate,
+  htmlCertificate,
+  htmlLogo,
+  javascriptCertificate,
+  microverseLogo,
+  reactLogo,
+  reactReduxCertificate,
+  rubyCertificate,
+  rubyLogo, rubyRailsCertificate,
+} from './components/assets/resources';
 
 const App:FC = () => (
   <div className="App">
@@ -33,10 +44,10 @@ const App:FC = () => (
       <ScreenItem
         child={(
           <div id="certificate-container">
-            <Certificate title="React" />
-            <Certificate title="Rails" borderColor="red" />
-            <Certificate title="English" borderColor="blue" />
-            <Certificate title="HTML" />
+            <Certificate title="React" icon={reactLogo} borderColor="#40CCFF" certificates={[reactReduxCertificate, javascriptCertificate]} />
+            <Certificate title="Ruby / Rails" borderColor="red" icon={rubyLogo} certificates={[rubyRailsCertificate, rubyCertificate]} />
+            <Certificate title="HTML / CSS" borderColor="#e54d24" icon={htmlLogo} certificates={[htmlCertificate]} />
+            <Certificate title="Others" borderColor="#6F36FF" icon={microverseLogo} certificates={[fullStackCertificate]} />
           </div>
       )}
         id="certificates"

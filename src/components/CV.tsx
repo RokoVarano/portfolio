@@ -116,7 +116,7 @@ const CV:FC = () => (
           <Text style={styles.sectionBody}>
             Written and spoken English from school,
             A year spent on a Working Holiday in New Zealand.
-            IELTS Certification on 2017 and 2019
+            IELTS Certification on 2017 and 2020
 
           </Text>
           <Text style={styles.sectionItem}>

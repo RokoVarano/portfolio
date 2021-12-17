@@ -1,16 +1,20 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
-import defaultPic from '../Utils';
 import CertificateDetails from './CertificateDetails';
 
 interface Props {
-  pictureUrl?: string,
   icon?: string,
   title?: string,
-  borderColor?: string
+  borderColor?: string,
+  certificates?: Array<{ picture: string, source: string, date: string, link:string }>
 }
 const Certificate = ({
-  pictureUrl, title, icon, borderColor,
+  title, icon, borderColor, certificates = [{
+    picture: '',
+    source: '',
+    date: '',
+    link: '',
+  }],
 }: Props) => (
   <Popup
     trigger={(
@@ -21,10 +25,10 @@ const Certificate = ({
           boxShadow: `0 0 2rem ${borderColor}, 0 0 1rem white`,
         }}
       >
-        <div className="picture" style={{ backgroundImage: `url(${pictureUrl})` }} />
+        <div className="picture" style={{ backgroundImage: `url(${certificates[0].picture})` }} />
         <div className="footnote">
           <div className="icon" style={{ backgroundImage: `url(${icon})` }} />
-          <h3 className="title">{title}</h3>
+          <h3 className="title" style={{ color: borderColor !== 'white' ? borderColor : 'black' }}>{title}</h3>
         </div>
       </div>
     )}
@@ -32,22 +36,7 @@ const Certificate = ({
     nested
   >
     <CertificateDetails items={
-      [
-        {
-          picture: defaultPic,
-          source: 'Microverse',
-          date: 'December, 2021',
-        },
-        {
-          picture: defaultPic,
-          source: 'Microverse',
-          date: 'December, 2022',
-        }, {
-          picture: defaultPic,
-          source: 'Microverse',
-          date: 'December, 2023',
-        },
-      ]
+      certificates
     }
     />
   </Popup>
@@ -55,10 +44,15 @@ const Certificate = ({
 );
 
 Certificate.defaultProps = {
-  pictureUrl: defaultPic,
   title: 'no title',
-  icon: defaultPic,
+  icon: '',
   borderColor: 'white',
+  certificates: [{
+    picture: '',
+    source: '',
+    date: '',
+    link: '',
+  }],
 };
 
 export default Certificate;
