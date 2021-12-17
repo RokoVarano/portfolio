@@ -21,14 +21,30 @@ const rubyRailsCertificate = {
   link: 'https://www.credential.net/bfcd6906-4b34-4eac-a4d6-1f9eaae1c7e9',
 };
 
-const englishLogo = 'https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_960_720.jpg';
-
-const ieltsCertificate2020 = {
-  picture: 'https://drive.google.com/file/d/1XKBotVLyr44UsYsLakJ987KT8csJHDr6/view?usp=sharing',
-  source: 'IELTS English Test',
-  date: 'January 2020',
-  link: 'https://www.britishcouncil.cl/',
+const rubyCertificate = {
+  picture: 'https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/28396501',
+  source: 'Ruby',
+  date: 'Febreaury 4, 2021',
+  link: 'https://www.credential.net/55102495-5ee9-4320-870a-0b4399615f26',
 };
+
+const fullStackCertificate = {
+  picture: 'https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/42634698',
+  source: 'Full Stack Web Development',
+  date: 'December 5, 2021',
+  link: 'https://www.credential.net/d945fb1d-43e9-4ffc-ac7f-a0842d096975',
+};
+
+const htmlLogo = 'https://w7.pngwing.com/pngs/5/56/png-transparent-website-development-html5-logo-world-wide-web-consortium-world-wide-web-angle-web-design-text.png';
+
+const htmlCertificate = {
+  picture: 'https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/30901885',
+  source: 'HTML/CSS',
+  date: 'April1, 2021',
+  link: 'https://www.credential.net/7616c468-cd01-43d2-a963-c02964f6f60c',
+};
+
+const englishLogo = 'https://cdn.pixabay.com/photo/2015/11/06/13/29/union-jack-1027898_960_720.jpg';
 
 export {
   reactLogo,
@@ -37,5 +53,8 @@ export {
   rubyLogo,
   rubyRailsCertificate,
   englishLogo,
-  ieltsCertificate2020,
+  fullStackCertificate,
+  rubyCertificate,
+  htmlLogo,
+  htmlCertificate,
 };

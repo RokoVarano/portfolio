@@ -13,7 +13,14 @@ import defaultPic, { fakeJob1, fakeJob2 } from './Utils';
 import Experience from './components/Experience';
 import CV from './components/CV';
 import {
-  javascriptCertificate, reactLogo, reactReduxCertificate, rubyLogo, rubyRailsCertificate,
+  fullStackCertificate,
+  htmlCertificate,
+  htmlLogo,
+  javascriptCertificate,
+  reactLogo,
+  reactReduxCertificate,
+  rubyCertificate,
+  rubyLogo, rubyRailsCertificate,
 } from './components/assets/resources';
 
 const App:FC = () => (
@@ -37,7 +44,9 @@ const App:FC = () => (
         child={(
           <div id="certificate-container">
             <Certificate title="React" icon={reactLogo} borderColor="#40CCFF" certificates={[reactReduxCertificate, javascriptCertificate]} />
-            <Certificate title="Ruby / Rails" borderColor="red" icon={rubyLogo} certificates={[rubyRailsCertificate]} />
+            <Certificate title="Ruby / Rails" borderColor="red" icon={rubyLogo} certificates={[rubyRailsCertificate, rubyCertificate]} />
+            <Certificate title="Ruby / Rails" borderColor="#e54d24" icon={htmlLogo} certificates={[htmlCertificate]} />
+            <Certificate title="Others" certificates={[fullStackCertificate]} />
           </div>
       )}
         id="certificates"

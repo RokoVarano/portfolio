@@ -1,6 +1,5 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
-import defaultPic from '../Utils';
 import CertificateDetails from './CertificateDetails';
 
 interface Props {
@@ -11,7 +10,7 @@ interface Props {
 }
 const Certificate = ({
   title, icon, borderColor, certificates = [{
-    picture: defaultPic,
+    picture: '',
     source: '',
     date: '',
     link: '',
@@ -46,10 +45,10 @@ const Certificate = ({
 
 Certificate.defaultProps = {
   title: 'no title',
-  icon: defaultPic,
+  icon: '',
   borderColor: 'white',
   certificates: [{
-    picture: defaultPic,
+    picture: '',
     source: '',
     date: '',
     link: '',
