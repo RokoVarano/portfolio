@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 interface Props {
-  items?: Array<{ picture: string, source: string, date: string }>
+  items?: Array<{ picture: string, source: string, date: string, link: string }>
 }
 
 const CertificateDetails = ({
@@ -14,18 +14,22 @@ const CertificateDetails = ({
     picture: defaultPic,
     source: 'Microverse',
     date: 'December, 2021',
+    link: '',
   }],
 }: Props) => {
   const carouselContents = items.map((item) => (
     <div className="carouselitem">
-      <div className="carouselpic" style={{ backgroundImage: `url(${item.picture})` }} />
-      <h2>Certificate title</h2>
-      <p>{`${item.source}, ${item.date}`}</p>
+      <a href={item.link} target="_blank" rel="noreferrer">
+        <div className="carouselpic" style={{ backgroundImage: `url(${item.picture})` }} />
+        {' '}
+      </a>
+      <h2>{item.source}</h2>
+      <p>{`${item.date}`}</p>
     </div>
   ));
 
   return (
-    <Slider>
+    <Slider infinite={false}>
       {carouselContents}
     </Slider>
   );
