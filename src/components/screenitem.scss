@@ -5,7 +5,6 @@
     padding: 5rem;
     background-size: cover;
     background-position: top;
-    border: $p-color solid 1px;
 
     .background-color {
         position: absolute;
@@ -14,7 +13,7 @@
         bottom: 0;
         right: 0;
 
-        background: radial-gradient(circle at 40% 40%, transparent, 50%, $flag-black 80% );
+        background: radial-gradient(circle at 40% 40%, transparent, 50%, $flag-black 70% );
     }
 }
 

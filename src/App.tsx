@@ -26,6 +26,7 @@ import {
 } from './components/assets/resources';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import SectionTitle from './components/SectionTitle';
 
 const App:FC = () => (
   <div className="App">
@@ -33,6 +34,7 @@ const App:FC = () => (
     <Sidebar />
     <Main>
       <ScreenItem child={<Home />} style={{ backgroundImage: `url(${defaultPic}` }} colorWash id="home" />
+      <SectionTitle title="Projects" />
       <ScreenItem
         child={(
           <div id="project-container">
@@ -57,6 +59,8 @@ const App:FC = () => (
             )}
         id="projects-mobile"
       />
+
+      <SectionTitle title="Certificates" />
       <ScreenItem
         child={(
           <div id="certificate-container">
@@ -68,6 +72,8 @@ const App:FC = () => (
       )}
         id="certificates"
       />
+
+      <SectionTitle title="Experience" />
       <ScreenItem
         child={(
           <Experience jobs={[fakeJob1, fakeJob2]} />
@@ -75,7 +81,11 @@ const App:FC = () => (
         style={{ flexWrap: 'wrap', overflowY: 'auto', justifyContent: 'space-evenly' }}
         id="recomendations"
       />
+
+      <SectionTitle title="Contact" />
       <ScreenItem child={<Contact />} style={{ justifyContent: 'center' }} id="contact" />
+
+      <SectionTitle title="Resume" />
       <ScreenItem
         child={(
           <PDFViewer width="800">
