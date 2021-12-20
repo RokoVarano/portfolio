@@ -27,6 +27,7 @@ import {
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import SectionTitle from './components/SectionTitle';
+import ExperienceMobile from './components/ExperienceMobile';
 
 const App:FC = () => (
   <div className="App">
@@ -76,7 +77,10 @@ const App:FC = () => (
       <SectionTitle title="Experience" />
       <ScreenItem
         child={(
-          <Experience jobs={[fakeJob1, fakeJob2]} />
+          <>
+            <Experience jobs={[fakeJob1, fakeJob2]} />
+            <ExperienceMobile jobs={[fakeJob1, fakeJob2]} />
+          </>
         )}
         style={{ flexWrap: 'wrap', overflowY: 'auto', justifyContent: 'space-evenly' }}
         id="recomendations"

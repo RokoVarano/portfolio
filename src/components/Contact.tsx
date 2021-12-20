@@ -2,10 +2,13 @@
 import React from 'react';
 import ReactWhatsapp from 'react-whatsapp';
 import emailjs from 'emailjs-com';
+import {
+  PDFDownloadLink,
+} from '@react-pdf/renderer';
+import CV from './CV';
 
 const Contact = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    console.log(e.currentTarget);
     e.preventDefault();
 
     emailjs.sendForm('service_dtw31bf', 'template_mby5gis', e.currentTarget, 'user_pRyFR4Jz2Gba4tTelD62r')
@@ -24,7 +27,7 @@ const Contact = () => {
         <ReactWhatsapp
           number="56973445869"
           message="Hello. I saw your Portfolio and I would like to talk to you"
-          element="h1"
+          element="div"
         >
           <h1 id="contact-ws">
             <i className="fab fa-whatsapp" />
@@ -35,7 +38,7 @@ const Contact = () => {
 
         <div id="contact-email">
 
-          <h1>
+          <h1 className="mobile">
             <i className="fas fa-envelope" />
             {' '}
             rodrigo.ibaceta01@gmail.com
@@ -80,6 +83,14 @@ const Contact = () => {
             /rodrigo-ibaceta
           </h1>
         </a>
+
+        <PDFDownloadLink document={<CV />} fileName="RodrigoIbaceta.pdf">
+          <h1 id="contact-resume">
+            <i className="far fa-file-alt" />
+            {' '}
+            Resume
+          </h1>
+        </PDFDownloadLink>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ interface Props {
 }
 
 const SectionTitle:FC<Props> = ({ title = '' }: Props) => (
-  <h1 className="sectionTitle">{title}</h1>
+  <h1 className="sectionTitle" id={`section-title-${title}`}>{title}</h1>
 );
 
 SectionTitle.defaultProps = {
