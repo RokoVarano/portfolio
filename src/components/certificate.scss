@@ -143,4 +143,10 @@ $react-blue: #40CCFF;
             }
         }
     }
+
+    .popup-overlay {
+        .popup-content {
+            width: 98vw;
+        }
+    }
 }
