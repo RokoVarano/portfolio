@@ -37,6 +37,7 @@
         padding-left: 1rem;
         border: 0.2rem $flag-blue solid;
         border-radius: 0.5rem;
+        background-color: $flag-black;
 
         .position {
             font-size: 2rem;
@@ -56,6 +57,7 @@
     #recomendations {
         .jobs-container {
             width: 80%;
+            height: auto;
         }
 
         .desktop {

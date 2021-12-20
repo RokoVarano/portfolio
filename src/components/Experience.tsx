@@ -10,9 +10,14 @@ const Experience:FC<Props> = (props: Props) => {
 
   const [currentJob, setCurrentJob] = useState<Job>();
 
+  const highlight = {
+    boxShadow: '0 0 3rem red, 0 0 2rem red',
+  };
+
   const jobDisplay = (job: Job) => (
     <li className="job-container">
       <button
+        style={currentJob === job ? highlight : {}}
         type="button"
         onClick={() => {
           setCurrentJob(job);
@@ -30,6 +35,7 @@ const Experience:FC<Props> = (props: Props) => {
       <p>{`${job.phone}, ${job.email}`}</p>
     </li>
   );
+
   return (
     <>
       <ul className="jobs-container desktop">
