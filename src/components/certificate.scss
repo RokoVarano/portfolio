@@ -147,6 +147,21 @@ $react-blue: #40CCFF;
     .popup-overlay {
         .popup-content {
             width: 98vw;
+            height: 70vh;
+
+            .slick-slider { 
+                
+                
+                .slick-arrow::before {
+                    display: none;
+                }
+            }
+
+            .carouselitem {
+                p {
+                    color: $p-color;
+                }
+            }
         }
     }
 }
