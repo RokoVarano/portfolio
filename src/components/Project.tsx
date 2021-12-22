@@ -6,16 +6,17 @@ interface Props {
   title?: string,
   technologies?: Array<string>,
   borderColor?: string,
+  noBorder?: boolean,
 }
 const Project = ({
-  pictureUrl, title, technologies = [], borderColor,
+  noBorder = false, pictureUrl, title, technologies = [], borderColor,
 }: Props) => {
   const technolist = technologies.map((item) => <li className="tecnology"><p>{item}</p></li>);
 
   return (
     <div
       className="project-component"
-      style={{
+      style={noBorder ? {} : {
         border: `${borderColor} 0.2rem solid`,
         boxShadow: `0 0 2rem ${borderColor}, 0 0 1rem white`,
       }}
@@ -38,6 +39,7 @@ Project.defaultProps = {
   title: 'no title',
   technologies: [],
   borderColor: 'white',
+  noBorder: false,
 };
 
 export default Project;

@@ -9,6 +9,10 @@
         }
     }
 
+    .mobile {
+        display: none;
+    }
+
     .jobs-container {
         width: 48%;
 
@@ -33,6 +37,7 @@
         padding-left: 1rem;
         border: 0.2rem $flag-blue solid;
         border-radius: 0.5rem;
+        background-color: $flag-black;
 
         .position {
             font-size: 2rem;
@@ -44,6 +49,57 @@
 
         li {
             padding: 1rem 0;
+        }
+    }
+}
+
+@media (max-width: 799px){ 
+    #recomendations {
+        .jobs-container {
+            width: 80%;
+            height: auto;
+        }
+
+        .desktop {
+            display: none
+        }
+
+        .mobile {
+            display: flex;
+        }
+
+
+    }
+
+    .popup-overlay {
+        .popup-content {
+            width: 90%;
+            background: $flag-black;
+            border: 0.2rem $flag-blue solid;
+            border-radius: 0.5rem;
+
+            .recs-container {
+                width: 80%;
+                padding-left: 1rem;
+                font-family: $font-p;
+        
+                .position {
+                    font-size: 2rem;
+                }
+        
+                h1 {
+                    color: $flag-blue;
+                    font-family: $font-h;
+                }
+        
+                li {
+                    padding: 1rem 0;
+                }
+
+                p {
+                    color: $p-color;
+                }
+            }
         }
     }
 }

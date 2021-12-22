@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { PDFViewer } from '@react-pdf/renderer';
+import Slider from 'react-slick';
 import Name from './components/Name';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
@@ -23,6 +24,10 @@ import {
   rubyCertificate,
   rubyLogo, rubyRailsCertificate,
 } from './components/assets/resources';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import SectionTitle from './components/SectionTitle';
+import ExperienceMobile from './components/ExperienceMobile';
 
 const App:FC = () => (
   <div className="App">
@@ -30,6 +35,7 @@ const App:FC = () => (
     <Sidebar />
     <Main>
       <ScreenItem child={<Home />} style={{ backgroundImage: `url(${defaultPic}` }} colorWash id="home" />
+      <SectionTitle title="Projects" />
       <ScreenItem
         child={(
           <div id="project-container">
@@ -43,6 +49,21 @@ const App:FC = () => (
       />
       <ScreenItem
         child={(
+          <div id="project-container-mobile">
+            <Slider arrows={false} infinite={false}>
+              <Project title="Project A" technologies={['Rails', 'React', 'Jest', 'Redux']} borderColor="red" noBorder />
+              <Project title="Project B" technologies={['Rails', 'React', 'Jest', 'Redux']} noBorder />
+              <Project title="Project C" technologies={['Rails', 'React', 'Jest', 'Redux']} noBorder />
+              <Project title="Project D" technologies={['Rails', 'React', 'Jest', 'Redux']} borderColor="blue" noBorder />
+            </Slider>
+          </div>
+            )}
+        id="projects-mobile"
+      />
+
+      <SectionTitle title="Certificates" />
+      <ScreenItem
+        child={(
           <div id="certificate-container">
             <Certificate title="React" icon={reactLogo} borderColor="#40CCFF" certificates={[reactReduxCertificate, javascriptCertificate]} />
             <Certificate title="Ruby / Rails" borderColor="red" icon={rubyLogo} certificates={[rubyRailsCertificate, rubyCertificate]} />
@@ -52,14 +73,23 @@ const App:FC = () => (
       )}
         id="certificates"
       />
+
+      <SectionTitle title="Experience" />
       <ScreenItem
         child={(
-          <Experience jobs={[fakeJob1, fakeJob2]} />
+          <>
+            <Experience jobs={[fakeJob1, fakeJob2]} />
+            <ExperienceMobile jobs={[fakeJob1, fakeJob2]} />
+          </>
         )}
         style={{ flexWrap: 'wrap', overflowY: 'auto', justifyContent: 'space-evenly' }}
         id="recomendations"
       />
+
+      <SectionTitle title="Contact" />
       <ScreenItem child={<Contact />} style={{ justifyContent: 'center' }} id="contact" />
+
+      <SectionTitle title="Resume" />
       <ScreenItem
         child={(
           <PDFViewer width="800">

@@ -1,0 +1,13 @@
+.sectionTitle {
+    display: none;
+    border-top: 0.2rem solid $h-color;
+    justify-content: center;    
+    height: fit-content;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 799px){ 
+    .sectionTitle {
+        display: flex;
+    }
+}

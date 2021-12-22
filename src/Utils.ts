@@ -1,4 +1,4 @@
-const defaultPic = 'https://astelus.com/wp-content/viajes/Anubis-el-dios-egipcio-de-la-muerte.jpg';
+const defaultPic = 'https://industrydev.com/wp-content/uploads/2019/01/tail-light-trails-at-night-photography.jpg';
 
 class Job {
   name: string;

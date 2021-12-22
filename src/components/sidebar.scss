@@ -34,3 +34,9 @@
         height: 100%;
     }
 }
+
+@media (max-width: 799px){ 
+    #sidebar-component {
+        display: none;
+    }
+}

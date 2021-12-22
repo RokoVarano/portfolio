@@ -115,4 +115,59 @@
             color: $flag-blue;
         }
     }
+
+    #contact-resume {
+        display: none;
+    }
+}
+
+@media (max-width: 799px) {
+    #contact-component {
+        flex-direction: column;
+        height: 150vh;
+        
+        .contact-half {
+            width: 100%;
+            box-sizing: border-box;
+
+            #contact-ws, #contact-email, #contact-github, #contact-linkedin {
+                margin: 0 0 3vh 0;
+            }
+
+            #contact-email{
+                margin: 0;
+                padding: 0;
+                padding-bottom: 5vw;
+                margin-bottom: 3vh;
+
+                .mobile {
+                    font-size: 5vw;
+                    padding: 5vw;
+                }
+
+                form {
+                    ul {
+                        flex-direction: column;
+                    }
+
+                    textarea {
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        #contact-resume {
+            display: flex;
+            padding: 1rem;
+            color: $h-color;
+            border-radius: 1rem;
+            box-shadow: 0 0 3rem $h-color, 0 0 2rem $h-color;
+            background-color: $p-color;
+    
+            i {
+                color: $h-color;
+            }
+        }
+    }
 }

@@ -5,7 +5,7 @@
     padding: 5rem;
     background-size: cover;
     background-position: top;
-    border: $p-color solid 1px;
+    box-sizing: border-box;
 
     .background-color {
         position: absolute;
@@ -13,7 +13,11 @@
         left: 0;
         bottom: 0;
         right: 0;
+    }
+}
 
-        background: radial-gradient(circle at 40% 40%, transparent, 50%, $flag-black 80% );
+@media (max-width: 799px){ 
+    .screenitem-component {
+        padding: 0;
     }
 }

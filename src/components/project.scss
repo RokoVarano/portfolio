@@ -1,4 +1,4 @@
-#project-container {
+#project-container, #project-container-mobile {
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -73,3 +73,58 @@
     }
 }
 
+#project-container-mobile {
+    background: $p-color;
+
+    .slick-slider {
+        height: 100%;
+        width: 100%;
+
+        .slick-list {
+            min-height: 100%;
+
+            .project-component {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    box-shadow: none;
+
+                    .picture {
+                        min-height: 80vh;
+                        border-radius: 0;
+                    }
+
+                    h3 {
+                        height: 10vh;
+                    }
+
+                    .technologies {
+                        border-radius: 0;
+                        height: 10vh;
+
+                        .tecnology {
+                            height: auto;
+                        }
+                    }
+            }
+        }
+    }
+}
+
+@media (max-width: 799px){ 
+    #projects {
+        display: none;
+    }
+
+    #project-container-mobile {
+        .project-component {
+            padding: 0;
+        }
+    }
+}
+
+@media (min-width: 800px) { 
+    #projects-mobile {
+        display: none;
+    }
+}

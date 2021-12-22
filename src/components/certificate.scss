@@ -114,3 +114,54 @@ $react-blue: #40CCFF;
     }
 }
 
+@media (max-width: 799px){ 
+    #certificate-container {
+        .certificate-component {
+            height: auto;
+            max-width: 100%;
+            background: $p-color;
+            width: 80%;
+
+            .picture {
+                display: none;
+            }
+
+            .footnote {
+                border: 0;
+                justify-content: space-between;
+                white-space: nowrap;
+
+                .icon {
+                    border-radius: 0;
+                    height: 2.5rem;
+                    width: 2.5rem;
+                }
+
+                .title {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    .popup-overlay {
+        .popup-content {
+            width: 98vw;
+            height: 70vh;
+
+            .slick-slider { 
+                
+                
+                .slick-arrow::before {
+                    display: none;
+                }
+            }
+
+            .carouselitem {
+                p {
+                    color: $p-color;
+                }
+            }
+        }
+    }
+}
