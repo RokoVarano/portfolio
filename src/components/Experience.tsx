@@ -1,4 +1,7 @@
-import React, { FC, useState } from 'react';
+import React, {
+  FC, useEffect, useRef, useState,
+} from 'react';
+import { setTimeout } from 'timers';
 import { Job } from '../Utils';
 
 interface Props {
@@ -7,11 +10,26 @@ interface Props {
 
 const Experience:FC<Props> = (props: Props) => {
   const { jobs } = props;
+  const recsRef = useRef<HTMLUListElement>(null);
 
   const [currentJob, setCurrentJob] = useState<Job>();
 
+  useEffect(() => {
+    recsRef.current?.classList.add('turnoff');
+
+    setTimeout(() => recsRef.current?.classList.remove('turnoff'), 300);
+    setTimeout(() => recsRef.current?.classList.add('turnoff'), 650);
+    setTimeout(() => recsRef.current?.classList.remove('turnoff'), 780);
+  }, [currentJob]);
+
   const highlight = {
     boxShadow: '0 0 3rem red, 0 0 2rem red',
+    borderColor: '0.2rem red solid',
+  };
+
+  const h1highlight = {
+    textShadow: '0 0 3rem red, 0 0 1rem red',
+    color: 'red',
   };
 
   const jobDisplay = (job: Job) => (
@@ -23,8 +41,8 @@ const Experience:FC<Props> = (props: Props) => {
           setCurrentJob(job);
         }}
       >
-        <h1>{job.title}</h1>
-        <h2>{job.company}</h2>
+        <h1 style={currentJob === job ? h1highlight : {}}>{job.title}</h1>
+        <h2 style={currentJob === job ? h1highlight : {}}>{job.company}</h2>
       </button>
     </li>
   );
@@ -41,7 +59,7 @@ const Experience:FC<Props> = (props: Props) => {
       <ul className="jobs-container desktop">
         { jobs.map((job: Job) => jobDisplay(job)) }
       </ul>
-      <ul className="recs-container desktop">
+      <ul className="recs-container desktop" ref={recsRef}>
         <p className="position">{currentJob?.description}</p>
         { currentJob?.recommendations.map((rec: Job) => recommendationDisplay(rec))}
       </ul>

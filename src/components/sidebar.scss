@@ -21,6 +21,7 @@
                 background-color: $p-color-off;
                 clip-path: polygon(0% 0, 87% 0%, 100% 50%, 87% 100%, 0% 100%);
                 font-size: 1.2rem;
+                color: $h-color-off;
             }
         }
 
@@ -30,6 +31,7 @@
             
             h4 {
                 background-color: $p-color;
+                color: $h-color;
             }
         }
     }
