@@ -17,9 +17,9 @@ const Experience:FC<Props> = (props: Props) => {
   useEffect(() => {
     recsRef.current?.classList.add('turnoff');
 
-    setTimeout(() => recsRef.current?.classList.remove('turnoff'), 300);
-    setTimeout(() => recsRef.current?.classList.add('turnoff'), 650);
-    setTimeout(() => recsRef.current?.classList.remove('turnoff'), 780);
+    setTimeout(() => recsRef.current?.classList.remove('turnoff'), 50);
+    setTimeout(() => recsRef.current?.classList.add('turnoff'), 150);
+    setTimeout(() => recsRef.current?.classList.remove('turnoff'), 400);
   }, [currentJob]);
 
   const highlight = {
