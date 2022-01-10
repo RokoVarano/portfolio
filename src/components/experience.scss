@@ -22,33 +22,50 @@
             button {
                 background-color: transparent;
                 flex-direction: column;
-                border: 0.2rem $h-color solid;
+                border: 0.2rem $h-color-off solid;
                 border-radius: 0.5rem;
 
                 * {
                     padding: 0.5rem;
+                    color: $h-color-off;
                 }
             }
         }
     }
-    
+   
     .recs-container {
         width: 48%;
         padding-left: 1rem;
-        border: 0.2rem $flag-blue solid;
+        border: 0.2rem $p-color solid;
         border-radius: 0.5rem;
         background-color: $flag-black;
+        box-shadow: 0 0 2rem $flag-blue, 0 0 1rem $p-color;
 
         .position {
             font-size: 2rem;
         }
 
         h1 {
-            color: $flag-blue
+            color: $p-color;
+            text-shadow: 0 0 2rem $flag-blue, 0 0 1rem $p-color;
         }
 
         li {
             padding: 1rem 0;
+        }
+    }
+
+    .turnoff {
+        box-shadow: none;
+        border-color: $flag-blue-off;
+
+        h1 {
+            color: $flag-blue-off;
+            text-shadow: none;
+        }
+
+        p {
+            color: $p-color-off
         }
     }
 }
@@ -58,6 +75,16 @@
         .jobs-container {
             width: 80%;
             height: auto;
+
+            li {
+                button {
+                    border-color: $h-color;
+    
+                    * {
+                        color: $h-color;
+                    }
+                }
+            }
         }
 
         .desktop {
