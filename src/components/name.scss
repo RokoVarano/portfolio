@@ -22,16 +22,16 @@
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     #name-flag {
         position: absolute;
         background-color: transparent;
         height: 100%;
-        width: 140%;
+        width: 170%;
         background: linear-gradient($flag-black 0%, 20%, $flag-blue 20%, 40%, $flag-black 40%, 60%, $flag-blue 60%, 80%, $p-color 80%);
-        clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%, 23% 60%);
+        clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%, 23% 60%);
     }
 }
 

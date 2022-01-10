@@ -9,7 +9,7 @@ const Home:FC = () => {
 
   return (
     <div id="home-component" className="closed" ref={homeRef}>
-      <h1>Varano Development</h1>
+      <h1>Rodrigo Ibaceta</h1>
       <h3>Web development on React and Ruby on Rails</h3>
     </div>
   );

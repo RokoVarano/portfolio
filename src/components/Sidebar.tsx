@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, {
@@ -33,7 +34,7 @@ const Sidebar:FC = () => {
         <li ref={homeRef} onClick={() => setCurrentRef(homeRef)}><a href="#home"><h4>Home</h4></a></li>
         <li ref={projectsRef} onClick={() => setCurrentRef(projectsRef)}><a href="#projects"><h4>Projects</h4></a></li>
         <li ref={certificatesRef} onClick={() => setCurrentRef(certificatesRef)}><a href="#certificates"><h4>Certificates</h4></a></li>
-        <li ref={recomendationsRef} onClick={() => setCurrentRef(recomendationsRef)}><a href="#recomendations"><h4>Experience</h4></a></li>
+        {/* <li ref={recomendationsRef} onClick={() => setCurrentRef(recomendationsRef)}><a href="#recomendations"><h4>Experience</h4></a></li> */}
         <li ref={contactRef} onClick={() => setCurrentRef(contactRef)}><a href="#contact"><h4>Contact</h4></a></li>
         <li ref={resumeRef} onClick={() => setCurrentRef(resumeRef)}><a href="#resume"><h4>Resume.pdf</h4></a></li>
       </ul>

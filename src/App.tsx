@@ -10,8 +10,8 @@ import Home from './components/Home';
 import Project from './components/Project';
 import Contact from './components/Contact';
 import Certificate from './components/Certificate';
-import defaultPic, { fakeJob1, fakeJob2 } from './Utils';
-import Experience from './components/Experience';
+// import { fakeJob1, fakeJob2 } from './Utils';
+// import Experience from './components/Experience';
 import CV from './components/CV';
 import {
   fullStackCertificate,
@@ -27,14 +27,15 @@ import {
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import SectionTitle from './components/SectionTitle';
-import ExperienceMobile from './components/ExperienceMobile';
+// import ExperienceMobile from './components/ExperienceMobile';
+import homePic from './components/assets/fondoParedMejorado.jpg';
 
 const App:FC = () => (
   <div className="App">
     <Name />
     <Sidebar />
     <Main>
-      <ScreenItem child={<Home />} style={{ backgroundImage: `url(${defaultPic}` }} colorWash id="home" />
+      <ScreenItem child={<Home />} style={{ backgroundImage: `url(${homePic})` }} colorWash id="home" />
       <SectionTitle title="Projects" />
       <ScreenItem
         child={(
@@ -74,7 +75,7 @@ const App:FC = () => (
         id="certificates"
       />
 
-      <SectionTitle title="Experience" />
+      {/* <SectionTitle title="Experience" />
       <ScreenItem
         child={(
           <>
@@ -84,7 +85,7 @@ const App:FC = () => (
         )}
         style={{ flexWrap: 'wrap', overflowY: 'auto', justifyContent: 'space-evenly' }}
         id="recomendations"
-      />
+      /> */}
 
       <SectionTitle title="Contact" />
       <ScreenItem child={<Contact />} style={{ justifyContent: 'center' }} id="contact" />
