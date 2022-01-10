@@ -39,10 +39,10 @@ const App:FC = () => (
       <ScreenItem
         child={(
           <div id="project-container">
-            <Project title="Project A" technologies={['Rails', 'React', 'Jest', 'Redux']} borderColor="red" />
-            <Project title="Project B" technologies={['Rails', 'React', 'Jest', 'Redux']} />
-            <Project title="Project C" technologies={['Rails', 'React', 'Jest', 'Redux']} />
-            <Project title="Project D" technologies={['Rails', 'React', 'Jest', 'Redux']} borderColor="blue" />
+            <Project title="Task List + User Profile" technologies={['Rails', 'SASS', 'Postgresql']} borderColor="red" projectURL="https://github.com/RokoVarano/Tasker" demoURL="https://desolate-retreat-49950.herokuapp.com/" pictureUrl="https://github.com/RokoVarano/Tasker/raw/main/main.png" />
+            <Project title="DnD API mobile app" technologies={['React', 'Redux', 'Jest', 'SASS']} pictureUrl="https://github.com/RokoVarano/dyd_api_searcher/raw/develop/app_screenshot.png" projectURL="https://github.com/RokoVarano/dyd_api_searcher/tree/develop" demoURL="https://dndapiviewer.netlify.app/" />
+            <Project title="Hotel website example" technologies={['Rails', 'React', 'Postgresql']} pictureUrl="https://github.com/AdedayoOpeyemi/hotel_services_frontend/blob/development/src/components/assets/login.png?raw=true" demoURL="https://hotel-services-2021.netlify.app/" projectURL="https://github.com/RokoVarano/hotel_services_backend" />
+            <Project title="Weather API App" technologies={['JS', 'Webpack', 'SASS']} borderColor="blue" projectURL="https://github.com/RokoVarano/Weather-app/tree/develop" pictureUrl="https://github.com/RokoVarano/Weather-app/blob/develop/weatherapp.png?raw=true" demoURL="https://suspicious-roentgen-bd14e2.netlify.app/" />
           </div>
       )}
         id="projects"
@@ -51,10 +51,10 @@ const App:FC = () => (
         child={(
           <div id="project-container-mobile">
             <Slider arrows={false} infinite={false}>
-              <Project title="Project A" technologies={['Rails', 'React', 'Jest', 'Redux']} borderColor="red" noBorder />
-              <Project title="Project B" technologies={['Rails', 'React', 'Jest', 'Redux']} noBorder />
-              <Project title="Project C" technologies={['Rails', 'React', 'Jest', 'Redux']} noBorder />
-              <Project title="Project D" technologies={['Rails', 'React', 'Jest', 'Redux']} borderColor="blue" noBorder />
+              <Project title="Task List + User Profile" technologies={['Rails', 'SASS', 'Postgresql']} borderColor="red" projectURL="https://github.com/RokoVarano/Tasker" demoURL="https://desolate-retreat-49950.herokuapp.com/" pictureUrl="https://github.com/RokoVarano/Tasker/raw/main/main.png" noBorder />
+              <Project title="DnD API mobile app" technologies={['React', 'Redux', 'Jest', 'SASS']} pictureUrl="https://github.com/RokoVarano/dyd_api_searcher/raw/develop/app_screenshot.png" projectURL="https://github.com/RokoVarano/dyd_api_searcher/tree/develop" demoURL="https://dndapiviewer.netlify.app/" noBorder />
+              <Project title="Hotel website example" technologies={['Rails', 'React', 'Postgresql']} pictureUrl="https://github.com/AdedayoOpeyemi/hotel_services_frontend/blob/development/src/components/assets/login.png?raw=true" demoURL="https://hotel-services-2021.netlify.app" projectURL="https://github.com/RokoVarano/hotel_services_backend" noBorder />
+              <Project title="Weather API App" technologies={['JS', 'Webpack', 'SASS']} borderColor="blue" projectURL="https://github.com/RokoVarano/Weather-app/tree/develop" pictureUrl="https://github.com/RokoVarano/Weather-app/blob/develop/weatherapp.png?raw=true" demoURL="https://suspicious-roentgen-bd14e2.netlify.app/" noBorder />
             </Slider>
           </div>
             )}
